@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Modern Prestige';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Modern Prestige DEMO'), url('font/modern_prestige/Modern\ Prestige\ DEMO.otf') format('OpenType');
+    }
+
+*{
+    box-sizing: border-box;
+    font-family: Modern Prestige;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: black;
+}
+
+.button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 35px;
+    padding-left: 10px;
+
+    font-style: none;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+
+    border-radius: 1200px;
+    border: none;
+    cursor: pointer;
+    min-height: 357px;
+    width: 357px;
+
+    position: relative;
+    background: linear-gradient(to bottom right, #01b9f1, #ff00bf);
+    color: #ffffff; 
+    transition: box-shadow 0.2s ease-in-out; 
+
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.button::after{
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    z-index: -1;
+    background: linear-gradient(to bottom right, #0185f1, #f700ff);
+}
+
+.button:hover , .button:active{
+    z-index: 0;
+    box-shadow: 40px 0 100px #008cffbb, 
+    -40px 0 110px #f700ffd2;
+}
+
+h1{
+    position: relative;
+    top: -25%;
+    font-weight: bolder;
+    font-size: 4rem;
+    transition: color .3s ease-in-out;
+    transition: text-shadow .15s ease-in-out;
+
+    touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+}
+
+h1:active , h1:hover{
+    color: #dc143c;
+    text-shadow: 12px 2px 12px #ffffff;
+    filter: drop-shadow(-12px -2px 12px #ffffff);
+    
+}
+
+@media screen and (max-width: 991px) {
+    h1{
+        font-size: 3.75rem;
+        margin-right: 10px;
+    }
+}
+
+.controls{
+    display: flex;
+    margin: 10px;
+    width: auto;
+}
+
+.avanzar{
+    margin-top: 5px;
+    margin-right: 8px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+
+    min-height: 60px;
+    width: 160px;
+    background-color: #121212;
+    color: #eeeeee;
+    font-size: 2rem;
+    text-align: center;
+
+    border-radius: 500px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: box-shadow 0.2s ease-in-out; 
+}
+
+.avanzar::after{
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    z-index: -1;
+    background: linear-gradient(to bottom right, #6200ff , #00ff85);
+}
+
+.avanzar:hover , .avanzar:active{
+    z-index: 0;
+    box-shadow: 5px 3px 40px #cfcfcf, 
+    -5px -3px 40px #cfcfcf ;
+}
